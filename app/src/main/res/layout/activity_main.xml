@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.phong.googlemap_1.MainActivity">
+
+    <!--
+    +ListView : dùng để hiển thị mảng dữ liệu
+    +TextView : Dùng để hiển thị vị trí và giá trị của phần tử được chọn trong ListView
+    -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></ListView>
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_demos"
+        android:visibility="gone" />
+
+
+</LinearLayout>
