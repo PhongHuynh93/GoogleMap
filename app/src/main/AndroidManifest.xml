@@ -48,10 +48,6 @@
             android:label="@string/title_activity_circles" >
         </activity>
         <activity
-            android:name=".Activity_map.Test_circle"
-            android:label="@string/title_activity_test_circle" >
-        </activity>
-        <activity
             android:name=".Activity_map.EventsDemoActivity"
             android:label="@string/title_activity_ground_overlay_demo" >
         </activity>

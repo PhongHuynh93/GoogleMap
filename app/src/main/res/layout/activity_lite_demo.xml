@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    tools:context="com.phong.googlemap_1.Activity_map.map_11.Lite_demo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lite_demo_introtext"
+        android:text="Click the map"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/go_to_darwin"
+        android:onClick="showDarwin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lite_demo_introtext"
+        android:text="GO TO DARWIN (NO MARKERS)"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/go_to_adelaide"
+        android:onClick="showAdelaide"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/go_to_darwin"
+        android:layout_toEndOf="@+id/go_to_australia"
+        android:layout_toRightOf="@+id/go_to_australia"
+        android:text="GO TO ADELAIDE (ONE MARKER)"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/go_to_australia"
+        android:onClick="showAustralia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/go_to_adelaide"
+        android:layout_toEndOf="@+id/go_to_darwin"
+        android:layout_toRightOf="@id/go_to_darwin"
+        android:text="GO TO AUSTRALIA (MULTIPLE MARKERS)"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@id/go_to_australia"
+        map:liteMode="true" />
+</RelativeLayout>
